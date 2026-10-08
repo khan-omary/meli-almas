@@ -8,65 +8,92 @@
 
     @vite([
         'resources/css/header.css',
-        'resources/css/footer.css'
+        'resources/css/footer.css',
+        'resources/css/app.css'
     ])
 
     @yield('css')
+
     <title>@yield('title', 'محمد فهیم')</title>
 </head>
 
 <body>
 
-    <nav>
-        <div class="menu">
-            <div class="logo"><img src="{{ asset('image/logo/logo2.png') }}" alt=""></div>
-            <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
-            <ul class="nav-links">
-                <li><a href="{{ url('/') }}">کورپاڼه</a></li>
-                <li><a href="{{ url('/projects') }}">پروژې</a></li>
-                <li><a href="{{ url('/about') }}">زما په اړه</a></li>
-                <li><a href="{{ url('/contact') }}">اړیکه</a></li>
-            </ul>
 
-        </div>
-    </nav>
+    <header>
+        <div class="menu-overlay"></div>
+        <nav>
+            <div class="navigation">
+                <div class="logo">
+                    <img src="{{ asset('image/logo/Logo-removebg-preview.png')}} " alt="">
+                </div>
+                <div class="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="menu-bar">
+                    <ul class="menu-list">
+                        <li><a href="{{ url('/') }}">کور پاڼه</a></li>
+                        <li><a href="{{ url('/about') }}">زموژ په اړه</a></li>
+                        <li><a href="{{ url('/services') }}">خدمات</a></li>
+                        <li><a href="{{ url('/project') }}">پروژی</a></li>
+                        <li><a href="{{ url('/team') }}">کاری ټیم</a></li>
+                        <li><a href="{{ url('/job') }}">دندی</a></li>
+                        <li><a href="{{ url('/contact') }}">اړیکه</a></li>
+                        <li><a href="{{ url('/Post_comment') }}">پوسټونه او کمنټونه</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
 
     @yield('content')
 
-    <footer id="footer">
-        <div class="footer-container">
-            <div class="footer-box">
-                <h2 class="footer-logo">Khan Omary</h2>
-                <p>
-                    عصري ویب‌سایټونه، مدیریتي سیستمونه،
-                    ډیسکټاپ اپلیکیشنونه او مسلکي سافټویر حلونه.
-                </p>
-            </div>
 
+    <footer>
 
-            <div class="footer-box">
-                <h3>چټک لینکونه</h3>
-                <ul class="footer-links">
-                    <li><a href="{{ url('/') }}">کورپاڼه</a></li>
-                    <li><a href="{{ url('/projects') }}">پروژې</a></li>
-                    <li><a href="{{ url('/about') }}">زما په اړه</a></li>
-                    <li> <a href="{{ url('/contact') }}">اړیکه</a></li>
+        <div class="footer-about">
+            <h3>constraction company</h3>
+            <p>موژ د وادنیو د جوړولو مسلکی خدمات وړاندی کوو
+                .موژ د وادنیو د جوړولو مسلکی خدمات وړاندی کوو.
+                موژ د وادنیو د جوړولو مسلکی خدمات وړاندی کوو.
+                موژ د وادنیو د جوړولو مسلکی خدمات وړاندی کوو.
+            </p>
+        </div>
+
+        <div class="link-contact-secial-link">
+            <div class="footer-link">
+                <h3>Quick links</h3>
+                <ul>
+                    <li><a href="index.html">کور پاڼه</a></li>
+                    <li><a href="about.html">زموژ په اړه</a></li>
+                    <li><a href="services.html">خدمات</a></li>
+                    <li><a href="project.html">پروژی</a></li>
+                    <li><a href="team.html">کاری ټیم</a></li>
+                    <li><a href="job.html">دندی</a></li>
+                    <li><a href="contact.html">اړیکه</a></li>
+                    <li><a href="Post_comment.html">پوسټونه او کمنټونه</a></li>
                 </ul>
             </div>
 
+            <div class="footer-contact">
+                <h3>اړیکه</h3>
+                <p>موبایل: 07000000000</p>
+                <p>بریښنالیک: khan@gamil.com</p>
+                <p> پته: کابل، افغانستان</p>
+            </div>
 
-            <div class="footer-box">
-                <h3>ټولنیزې اړیکې</h3>
-                <div class="footer-socials">
-                    <a href="https://www.facebook.com/profile.php?id=61589091702572"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://wa.me/93795741648"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="https://t.me/khan_omary"><i class="fa-brands fa-telegram"></i></a>
-                </div>
+            <div class="social_media_link">
+                <a href="#" style="color: rgb(125, 125, 125);"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" style="color: rgb(125, 125, 125);"><i class="fa-brands fa-telegram"></i></a>
+                <a href="#" style="color: rgb(125, 125, 125);"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" style="color: rgb(125, 125, 125);"><i class="fa-brands fa-twitter"></i></a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p> © 2026 Khan Omary | ټول حقونه خوندي دي </p>
+        </div>
+        <div class="copy-right">
+            <p>© 2026 Construction Company | ټول حقونه خوندي دي</p>
+        </div>
         </div>
     </footer>
     @yield('js')

@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1rem;
+}
+
+:root {
+    --body-color: rgb(15, 23, 42);
+    --text-color: white;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--body-color);
+    color: var(--text-color);
+    margin: auto;
+    font-size: 0.9rem;
+}
+
+
+@media (min-width: 601px) and (max-width: 991px) {
+    html {
+        font-size: 18px;
+    }
+
+    body {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (min-width: 992px) {
+
+    html {
+        font-size: 16px;
+    }
+
+    body {
+        font-size: 1rem;
+    }
+}

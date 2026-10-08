@@ -1,66 +1,75 @@
-
 @extends('layouts.app')
 
 @section('title', 'index')
 
+
 @section('css')
 @vite([
-    'resources/css/style.css',
-    'resources/css/can_do.css',
-    'resources/css/technology.css',
-    'resources/css/project.css',
+'resources/css/style.css',
+'resources/css/images.css',
+'resources/css/Hero_section.css',
+'resources/css/faq_section.css',
+'resources/css/card-3.css',
+'resources/css/Poeple_idea.css',
 ])
-@endsection()
+@endsection();
 
 
 @section('content')
 
-    <section id="hero_section">
-        <div id="info" class="hero_item">
-            <h2>سلام زه <span>محمد فهیم</span></h2>
-            <h4>یو سافټویر انجینر او د سافټویر پواسطه مشکل حل کوونکی، چې کولی شم مدیریتي سیستمونه، ډیسکټاپ اپلیکیشنونه،
-                ویبسایټونه او د ماشین زده کړې ماډلونه (AI) جوړ کړم.</h4>
-        </div>
-        <div id="image" class="hero_item">
-            <div class="hero-avatar">
-                <img id="heroImage" src="image/hero_section/8.jpg" alt="محمد فهیم">
+<section id="Hero_section">
+    <div class="hero_div">
+
+        <div class="company-name-image">
+            <div id="company-name">
+                <h1><b>ملی الماس ودانیز شرکت</b></h1>
             </div>
+            <img src="{{ asset('image/hero_section/77.png')}} " alt="">
         </div>
-    </section>
+        <br>
+        <div id="company_ifno">
+            <h2><b>موږ ستاسو راتلونکی په باور، کیفیت او نوښت سره جوړوو</b></h2>
+            <p>
+                موږ یو مخکښ او باور وړ ساختماني شرکت یو چې د لوړ کیفیت، قوي جوړښتونو او عصري ډیزاینونو په وړاندې
+                کولو کې ځانګړی مقام لرو. زموږ هدف دا دی چې ستاسو خیالونه، نظریات او خوبونه په داسې واقعي پروژو
+                بدل کړو چې نه یوازې ښکلي وي، بلکې کلونه کلونه دوام وکړي.
 
+                زموږ تجربه لرونکی او مسلکي ټیم د هرې پروژې په هر پړاو کې له تاسو سره ولاړ وي — له پلان جوړونې او
+                نړیوالو اصولو په کارولو سره داسې ودانۍ جوړوو چې د کیفیت، خوندیتوب او ښکلا بشپړ انعکاس وي.
 
-    <section class="cards-section">
-        <div class="section-badge">
-            <h2>✦ زموږ خدمات چی تاسو ته یی وړاندی کوو✦</h2>
+                راځئ یوځای داسې راتلونکی جوړ کړو چې هم قوي وي، هم ښکلی، او هم د باور وړ.
+            </p>
         </div>
+    </div>
 
-        <div class="cards-grid">
+</section>
 
-        </div>
-    </section>
+<!-- This is feature section  -->
+<section id="cr_tech_sec_cln_section">
 
-    <section id="projects">
-        <h2 class="section-title">✦ پروژې ✦</h2>
+</section>
 
-        <div class="projects-grid">
-        </div>
-    </section>
+<section id="video-demo">
+    <h3>ویبسایټ ډیمو</h3>
+    <p>که چیری تاسو ددی ویبسایټ د کارکرد نه وی بلد نو دغه ویدیو ستاسو سره مرته کوی چی ددی ویبسایټ په هر برخه پوه شی.
+    </p>
 
-    <section id="skills-section">
-        <div class="section-title">
-            <h2>✦ زموږ تخنیکي مهارتونه ✦</h2>
-            <h6>د لاندی تکنالوژیو په استفاده مو پروژې ډيولپ کوو ، چی پدی برخه شی تجربی په لرلو سره کار کوو.</h6>
-        </div>
-        <div class="skills-grid">
-        </div>
-    </section>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/ybw27zB2SMw" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+
+<section id="FAQ-section"></section>
+<section id="new-section"></section>
+<section id="People_Ideas"></section>
 @endsection()
 
-@section('js')
-    <script src="{{ asset('js/Home_Service.js')}}"></script>
-    <script src="{{ asset('js/Skill_cards.js')}}"></script>
-    <script src=" {{ asset('js/projects.js')}}"></script>
-    <script src="{{ asset('js/Hambergar.js')}}"></script>
-    <script src="{{ asset('js/Hero_Image.js')}}"></script>
-@endsection()
 
+@vite('resources/js/featureSection.js')
+@vite('resources/js/faq_sec.js')
+@vite('resources/js/News.js')
+@vite('resources/js/header_hambergarMenu.js')
+@vite('resources/js/Poeple_Ideas.js')

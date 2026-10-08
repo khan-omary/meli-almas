@@ -1,0 +1,105 @@
+.service_title {
+    text-align: center;
+    margin: 2rem;
+}
+
+#services {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 10px;
+    gap: 12px;
+    border-radius: 4px;
+    margin: 1.2%;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(45, 54, 72, 0.8);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    height: auto;
+    border-color: rgba(29, 32, 39, 0.8);
+    transition: all 0.6s ease;
+    box-shadow: rgb(0, 0, 0) 5px 10px 11px;
+}
+
+
+.service:hover {
+    border-color: rgba(255, 187, 0, 0.8);
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 25px 20px -20px;
+}
+
+.service>img {
+    width: 95%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.service-info {
+    margin: 0.9px;
+
+}
+
+.service-name {
+    text-align: center;
+}
+
+
+@media (min-width: 601px) and (max-width: 1023px) {
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.8rem;
+    }
+
+    .menu-bar {
+        justify-content: center;
+    }
+
+    .menu-list {
+        gap: 0.8rem;
+        justify-content: center;
+    }
+
+    .menu-list li a {
+        font-size: 0.85rem;
+    }
+
+    #services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-info {
+        margin: 2px;
+        padding: 2px;
+    }
+
+    .service-name {
+        font-size: 1.2rem;
+    }
+
+    .service-real-info {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 992px) {
+
+    #services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-name {
+        font-size: 1.6rem;
+    }
+
+    .service-real-info {
+        font-size: 1.2rem;
+    }
+}

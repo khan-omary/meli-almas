@@ -1,53 +1,228 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 :root {
-    --black: #000000;
-    --white: #ffffff;
-    --green: #00ff66;
-}
-
-body {
-    background-color: var(--black);
-    color: var(--white);
-    font-family: 'Segoe UI', 'Poppins', system-ui, -apple-system, sans-serif;
-    line-height: 1.5;
-    scroll-behavior: smooth;
+    --primary-color: rgb(15, 23, 42);
+    --text-color: white;
+    --secondary-color: rgb(15, 23, 42);
+    --third-color: rgb(6, 13, 28);
 }
 
 section {
-    padding: 3rem 1.5rem;
-    margin: 0 auto;
-    max-width: 1280px;
+    border-radius: 4px;
+    width: 95%;
+    margin: 2.5%;
+    margin-bottom: 6%;
+    background-color: var(--secondary-color);
+
 }
 
-.section-title {
-    text-align: center;
+#image-karim-name {
+    margin: 1rem auto;
 }
 
-#about_me {
-    margin-top: 1.5rem;
-    border: 0.2px solid rgba(0, 255, 102, 0.25);
-    border-radius: 2rem;
-    box-shadow: rgba(0, 255, 102, 0.25) 5px 10px 11px;
-}
-
-#about_me:hover {
-    border-color: var(--green);
-    transform: translateY(-5px);
-}
-
-#about_me p {
-    margin-top: 1rem;
-    font-size: 1.15rem;
-    background: rgba(255, 255, 255, 0.02);
-    padding: 1.8rem;
-    border-radius: 28px;
-    border: 1px solid rgba(0, 255, 102, 0.25);
-    line-height: 1.7;
+#creat {
+    font-size: 0.5rem;
 }
 
 
+#full-goal-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 1%;
+}
+
+.goal-items {
+    border-radius: 4px;
+    box-shadow: rgb(0, 0, 0) 5px 10px 11px;
+}
+
+#goal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+#goal-info {
+    background-color: var(--secondary-color);
+    padding: 2%;
+}
+
+#goul {
+    background-color: var(--third-color);
+}
+
+
+#Hero_section {
+    border-top-left-radius: 65%;
+    box-shadow: rgb(0, 0, 0) 5px 10px 11px;
+}
+
+#hero-info-image {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#hero-info {
+    padding: 1%;
+    margin: 1%;
+}
+
+#hero-image {
+    width: 100%;
+    border-radius: 50%;
+}
+
+#hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: rgb(0, 0, 0) 5px 10px 11px;
+}
+
+
+#history {
+    background-color: var(--third-color);
+    box-shadow: rgb(0, 0, 0) 5px 10px 11px;
+}
+
+#history-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1%;
+    padding: 1%;
+}
+
+#history-items {
+    margin: 2%;
+    border-radius: 4px;
+}
+
+#history-info {
+    background-color: var(--secondary-color);
+    padding: 1%;
+    border-radius: 4px;
+}
+
+#history-image {}
+
+#history-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+#do_list {
+    margin: 2%;
+}
+
+#extra-info-section {
+    width: 70%;
+    margin: auto;
+    background-color: var(--secondary-color);
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgb(0, 0, 0) 5px 10px 11px;
+    margin-bottom: 3%;
+}
+
+#extra-info {
+    width: 95%;
+    height: auto;
+    border-radius: 4px;
+    margin: 2%;
+}
+
+#ex_title {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+#four-card {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 95%;
+    margin: 2.5%;
+    border-radius: 4px;
+    gap: 10px;
+}
+
+.ex-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 4%;
+    background-color: rgb(35, 35, 35);
+    color: white;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-shadow: rgb(0, 0, 0) 5px 10px 11px;
+}
+
+
+@media (min-width: 601px) and (max-width: 991px) {
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.8rem;
+    }
+
+    .menu-bar {
+        justify-content: center;
+    }
+
+    .menu-list {
+        gap: 0.8rem;
+        justify-content: center;
+    }
+
+    .menu-list li a {
+        font-size: 0.85rem;
+    }
+
+    #full-goal-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #creat h3 {
+        font-size: 1rem;
+    }
+
+    #four-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    #creat {
+        font-size: 1rem;
+    }
+
+    #four-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ex-card {
+        width: 95%;
+    }
+}
